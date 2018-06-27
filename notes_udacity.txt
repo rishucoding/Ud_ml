@@ -1,0 +1,49 @@
+importing modules in python to increase code base and make life simple
+
+Proper classification depends on the dataset that I have and the features that I have. 
+
+Tuning the parameters can be a lot of work, but just sit tight for now--toward the end of the class we will introduce you to GridCV, a great sklearn tool that can find an optimal parameter tune almost automatically.
+
+SVM  - http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html 
+naive_bayes - http://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html
+
+Decision Tree splits where the information gain is maximum.. and thus, it ensure to 
+split at the point where highest impurity is present
+
+High bias or high variance are bad. Wee need to stay something in between. 
+
+Parameter tuning
+
+Here, and in the rest of the quizzes in this part of the course, put a direct equivalence between temporal data and time series data. It should be noted that, technically, time series data is a special case of temporal data: not all data that has timestamps can be considered time series data. Time series data puts the temporal nature of the data first, and is concerned with the change in values of other variables over time. These relationships are gathered from measurements taken within a consistent frame, typically at regular intervals (e.g. hourly, daily, monthly). Simply because collected data has timestamps does not make it "time-series data". If the timestamps do not have a meaningful dependent relationship across data points, then this should not be considered time-series data in a broad sense.
+For the quizzes, treat the "time series" option as generically "temporal".
+
+Some helper functions (featureFormat() and targetFeatureSplit() in tools/feature_format.py) that can take a list of feature names and the data dictionary, and return a numpy array. 
+
+For now, the takeaway message is to be very careful about introducing features that come from different sources depending on the class! It’s a classic way to accidentally introduce biases and mistakes.
+
+Continuous supervised learning -- continuous when there is some ordering in the output else discrete 
+
+Continuous machine learning is regression
+
+a measure of the relation between the mean value of one variable (e.g. output) and corresponding values of other variables (e.g. time and cost).
+
+coeff is same as slope in sklearn
+
+minimizing the erro in linear regression: two algorithms: OLS 
+ordinary least square and gradient squares 
+
+outliers are datapoints which fall far outside the datapoints, how does they affect the result of regression? 
+
+What causes outliers: sensor malfunciton, data entry errors and freak events
+
+Outlier rejection : 
+1. train the model with all datapoints
+2. remote points wiht largest residual error (~10%)
+3. train the model again
+go to step 2 if necessary 
+
+If accuracy increases significantly .. this means a good part 
+of !0% was outlier. 
+
+https://stackoverflow.com/questions/1762484/how-to-find-the-position-of-an-element-in-a-list-in-python
+
