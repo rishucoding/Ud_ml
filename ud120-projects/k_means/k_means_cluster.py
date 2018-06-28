@@ -48,6 +48,7 @@ data_dict.pop("TOTAL", 0)
 ### can be any key in the person-level dictionary (salary, director_fees, etc.) 
 feature_1 = "salary"
 feature_2 = "exercised_stock_options"
+feature_3 = "total_payments"
 poi  = "poi"
 features_list = [poi, feature_1, feature_2]
 data = featureFormat(data_dict, features_list )
@@ -59,11 +60,44 @@ poi, finance_features = targetFeatureSplit( data )
 ### for f1, f2, _ in finance_features:
 ### (as it's currently written, the line below assumes 2 features)
 for f1, f2 in finance_features:
-    plt.scatter( f1, f2 )
+    plt.scatter( f1, f2, color = "green" )
 plt.show()
 
 ### cluster here; create predictions of the cluster labels
 ### for the data and store them to a list called pred
+max = 0
+min = 100000000
+#data_sal = np.array([])
+for f2,f1 in finance_features:
+    if f2 > max:
+        max = f2
+    if f2 < min and f2 != 0.0:
+        min = f2
+    #data_sal
+
+
+print "maxvalue: ", max
+print "minvalue: ", min
+
+from sklearn.cluster import KMeans
+kmeans = KMeans(n_clusters = 2)
+kmeans.fit(data)
+pred = kmeans.predict(data)
+print pred
+
+#doing feature scaling
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+#   print data_sal
+scaler.fit(finance_features)
+print scaler.transform(finance_features)
+print scaler.transform([[200000,1000000]])
+
+#print scaler.transform([200000.0, 1000000])
+
+#scaler.fit(finance_features[])
+#print finance_features
+
 
 
 

@@ -10,6 +10,7 @@ from feature_format import featureFormat, targetFeatureSplit
 ### read in data dictionary, convert to numpy array
 data_dict = pickle.load( open("../final_project/final_project_dataset.pkl", "r") )
 features = ["salary", "bonus"]
+del data_dict["TOTAL"]
 data = featureFormat(data_dict, features)
 print len(data)
 print "salary: ", data[0][0]
@@ -30,17 +31,17 @@ for point in data:
     	max0 = salary
     if max1 < bonus:
     	max1 = bonus
-print max0
-print max1
-print type(data_dict)
+#print max0
+#print max1
+#print type(data_dict)
+count = 0
+print len(data_dict.items())
 for x in data_dict.items():
-	print type(x)
-	#print x
-	if x["salary"] == max0:
-		print 
-        print type(x)
-        #print x
-        print len(x[0])
+    #print x[1]["salary"]
+    
+    if (x[1]["bonus"] >= 5000000 and x[1]["bonus"]!= "NaN") and (x[1]["salary"] >=1000000 and x[1]["salary"] !="NaN") :
+        print x[0]
+#print data_dict["LAVORATO JOHN J"]
 
 matplotlib.pyplot.xlabel("salary")
 matplotlib.pyplot.ylabel("bonus")

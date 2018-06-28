@@ -32,7 +32,7 @@ def outlierCleaner(predictions, ages, net_worths):
     for index, x in enumerate(ages):
         if x != (-100):
             #cleaned_data.append(ages[x])
-            ages_new.append(ages[index])
+            ages_new.append(ages_new[index])
             error_list_new.append(error_list[index])
             net_worths_new.append(net_worths[index])
     cleaned_data = zip(ages_new,net_worths_new,error_list_new )

@@ -47,3 +47,4 @@ of !0% was outlier.
 
 https://stackoverflow.com/questions/1762484/how-to-find-the-position-of-an-element-in-a-list-in-python
 
+A quick way to remove a key-value pair from a dictionary is the following line: dictionary.pop( key, 0 )
