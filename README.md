@@ -31,4 +31,13 @@
 2. Object oriented programming in Python: 
 	Youtube: https://www.youtube.com/watch?v=ZDa-Z5JzLYM&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc
 
-3. Need to learn some art of programming maths in python 
+3. Need to learn some art of programming maths in python (http://cs231n.github.io/python-numpy-tutorial/) :)
+
+
+# Tips
+1. https://stackoverflow.com/questions/492387/indentationerror-unindent-does-not-match-any-outer-indentation-level
+2. https://www.programiz.com/python-programming/iterator
+3. https://stackoverflow.com/questions/1614236/in-python-how-do-i-convert-all-of-the-items-in-a-list-to-floats
+4. https://realpython.com/python-operators-expressions/
+5. http://www.pythonforbeginners.com/basics/list-comprehensions-in-python
+6. http://www.bogotobogo.com/python/python_fncs_map_filter_reduce.php # basic functional programming
